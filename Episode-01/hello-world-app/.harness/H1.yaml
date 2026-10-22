@@ -20,17 +20,3 @@ pipeline:
             shell: sh
           name: dev
           id: dev
-        - name: dev1
-          id: dev1
-          build:
-            uses: harnessCodeCloneStep
-            with:
-              build:
-                target: Git Branch
-                branch: master
-              depth: "50"
-              pr_merge_strategy: Source Branch
-              fetch_tags: false
-              lfs_enabled: false
-              debug: false
-              insecure: false
